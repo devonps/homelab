@@ -7,10 +7,10 @@ services:
       - db
       - redis
     environment:
-      APP_URL: ""
-      APP_SECRET: ""
-      DATABASE_URL: ""
-      REDIS_URL: ""
+      APP_URL: $APP_URL
+      APP_SECRET: $APP_SECRET
+      DATABASE_URL: $DATABASE_URL
+      REDIS_URL: $REDIS_URL
     ports:
       - "3100:3000"
     restart: unless-stopped
@@ -20,9 +20,9 @@ services:
   db:
     image: postgres:16-alpine
     environment:
-      POSTGRES_DB: docmost
-      POSTGRES_USER: docmost
-      POSTGRES_PASSWORD:
+      POSTGRES_DB: $POSTGRES_DB
+      POSTGRES_USER: $POSTGRES_USER
+      POSTGRES_PASSWORD:$POSTGRES_PASSWORD
     restart: unless-stopped
     volumes:
       - db_data:/var/lib/postgresql/data
