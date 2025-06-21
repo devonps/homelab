@@ -117,6 +117,6 @@ services:
     environment:
       - VPN_SERVICE_PROVIDER=nordvpn
       - VPN_TYPE=openvpn # or wireguard
-      - OPENVPN_USER=i2tgWFgpMH5ZQGT36euj2Y2q
-      - OPENVPN_PASSWORD=dAv69TKr63chCETNW3y1v4NP
+      - OPENVPN_USER=$OPENVPN_USER
+      - OPENVPN_PASSWORD=$OPENVPN_PASSWORD
       - SERVER_COUNTRIES=Netherlands
